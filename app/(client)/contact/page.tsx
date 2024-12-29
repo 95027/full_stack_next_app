@@ -12,7 +12,7 @@ const Contact = () => {
       const res = await axios.get("/api/contact");
 
       if (res.data) {
-        setContacts(res.data);
+        setContacts(res.data?.contacts);
       }
 
       console.log(res.data);
@@ -49,8 +49,7 @@ const Contact = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-            </tr>
+            <tr></tr>
           </tbody>
         </table>
       </div>
